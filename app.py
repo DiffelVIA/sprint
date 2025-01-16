@@ -24,7 +24,6 @@ if type_button:
      st.plotly_chart(fig, use_container_width=True)
 
 fuel_per_type = car_data.groupby('fuel')['type'].count()
-fig = px.bar(fuel_per_type, title = 'Combustible principal')
 combustible_button = st.button('Combustible principal')
 if combustible_button:
      st.write('Visualización de combustible principal')
@@ -32,7 +31,6 @@ if combustible_button:
      st.plotly_chart(fig, use_container_width=True)
 
 transmission_per_type = car_data.groupby('transmission')['type'].count()
-transmission_button = st.button('Transmisión principal')
 if transmission_button:
      st.write('Tipo de transmisión más comun en el stock actual')
      fig = px.bar(transmission_per_type, title = 'Transmisión principal')
